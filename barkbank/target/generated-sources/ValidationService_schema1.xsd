@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://validator.barkbank.javaee5.book.agoncal.org/" xmlns:tns="http://validator.barkbank.javaee5.book.agoncal.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="ValidateCard" type="tns:ValidateCard"/>
+
+  <xs:element name="ValidateCardResponse" type="tns:ValidateCardResponse"/>
+
+  <xs:complexType name="ValidateCard">
+    <xs:sequence>
+      <xs:element name="creditCardNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="creditCardType" type="xs:string" minOccurs="0"/>
+      <xs:element name="expiryDate" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ValidateCardResponse">
+    <xs:sequence>
+      <xs:element name="cardStatus" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

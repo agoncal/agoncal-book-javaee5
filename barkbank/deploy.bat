@@ -1,0 +1,1 @@
+asadmin --port 8282 deploy --force target\barkbank-3.0.war

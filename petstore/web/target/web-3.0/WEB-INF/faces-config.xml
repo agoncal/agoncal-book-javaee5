@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
+              version="1.2">
+
+    <!--Global navigation rules-->
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>main</from-outcome>
+            <to-view-id>/main.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>signon</from-outcome>
+            <to-view-id>/signon.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>signoff</from-outcome>
+            <to-view-id>/signoff.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>showaccount</from-outcome>
+            <to-view-id>/showaccount.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>showcart</from-outcome>
+            <to-view-id>/showcart.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>items.found</from-outcome>
+            <to-view-id>/searchresult.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>products.displayed</from-outcome>
+            <to-view-id>/showproducts.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!--Navigation rules-->
+    <navigation-rule>
+        <from-view-id>/showaccount.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>updateaccount</from-outcome>
+            <to-view-id>/updateaccount.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/updateaccount.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>account.updated</from-outcome>
+            <to-view-id>/showaccount.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/showproducts.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>items.displayed</from-outcome>
+            <to-view-id>/showitems.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/showitems.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>item.displayed</from-outcome>
+            <to-view-id>/showitem.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>item.added</from-outcome>
+            <to-view-id>/showcart.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/showitem.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>item.added</from-outcome>
+            <to-view-id>/showcart.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/showcart.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>cart.checked.out</from-outcome>
+            <to-view-id>/confirmorder.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>item.displayed</from-outcome>
+            <to-view-id>/showitem.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/confirmorder.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>order.confirmed</from-outcome>
+            <to-view-id>/orderconfirmed.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/signon.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>customer.signed.in</from-outcome>
+            <to-view-id>/main.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/signon.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>create.a.new.account</from-outcome>
+            <to-view-id>/createaccount.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/createaccount.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>customer.created</from-outcome>
+            <to-view-id>/main.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/searchresult.jsp</from-view-id>
+        <navigation-case>
+            <to-view-id>/showitem.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!--Managed bean-->
+    <managed-bean>
+        <managed-bean-name>catalog</managed-bean-name>
+        <managed-bean-class>org.agoncal.book.javaee5.petstore.jsf.CatalogController</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>account</managed-bean-name>
+        <managed-bean-class>org.agoncal.book.javaee5.petstore.jsf.AccountController</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>cart</managed-bean-name>
+        <managed-bean-class>org.agoncal.book.javaee5.petstore.jsf.ShoppingCartController</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+        <managed-property>
+            <property-name>customer</property-name>
+            <value>#{account.customer}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>deliveryAddress</property-name>
+            <value>#{account.homeAddress}</value>
+        </managed-property>
+    </managed-bean>
+
+</faces-config>

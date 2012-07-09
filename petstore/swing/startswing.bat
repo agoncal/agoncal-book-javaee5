@@ -1,0 +1,1 @@
+mvn exec:java -Dexec.mainClass="com.yaps.petstore.client.ui.PetstoreFrame"

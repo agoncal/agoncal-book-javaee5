@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://transport.petex.yaps.com/" xmlns:tns="http://transport.petex.yaps.com/"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="deliverItems" type="tns:deliverItems"/>
+
+    <xs:complexType name="deliverItems">
+        <xs:sequence>
+            <xs:element name="arg0" type="tns:deliveryPlace" minOccurs="0"/>
+            <xs:element name="arg1" type="tns:deliveryPlace" minOccurs="0"/>
+            <xs:element name="arg2" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="deliveryPlace">
+        <xs:sequence>
+            <xs:element name="city" type="xs:string" minOccurs="0"/>
+            <xs:element name="contact" type="xs:string" minOccurs="0"/>
+            <xs:element name="country" type="xs:string" minOccurs="0"/>
+            <xs:element name="state" type="xs:string" minOccurs="0"/>
+            <xs:element name="street" type="xs:string" minOccurs="0"/>
+            <xs:element name="zipcode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+

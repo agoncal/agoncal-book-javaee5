@@ -1,0 +1,18 @@
+<%@ taglib prefix="f" uri="http://java.sun.com/jsf/core" %>
+<%@ taglib prefix="h" uri="http://java.sun.com/jsf/html" %>
+
+<f:subview id="footer">
+
+    <div style="float: left; width: 200px;">
+        <h:outputText value="The YAPS Pet Store Demo is a fictional sample application." style="font-style: italic;"/>
+    </div>
+
+    <div style="margin-left: 225px;">
+        <a href="http://java.sun.com/"><img border="0" src="images/java.gif" alt=""/></a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="https://glassfish.dev.java.net/"><img border="0" src="images/glassfish.gif" alt=""/></a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="http://db.apache.org/derby/"><img border="0" src="images/derby.gif" alt=""/></a>
+    </div>
+
+</f:subview>

@@ -1,0 +1,135 @@
+* {
+    font-family: verdana, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 10px;
+}
+
+b {
+    font-weight: bold;
+}
+
+a {
+    font-style: italic;
+    color: #660099;
+}
+
+a:hover {
+    text-decoration: overline underline;
+    color: #DA6C0A;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #669900;
+    line-height: 30px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+    background-color: #669900;
+    line-height: 20px;
+    padding-left: 5px;
+}
+
+/* ========================================================================= */
+
+#header, #sidebar, #footer {
+    background-color: #E0F0D0;
+    border: 1px solid #660099;
+}
+
+#header {
+    width: 780px;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+#sidebar {
+    width: 150px;
+    height: 379px;
+    float: left;
+    z-index: 2;
+    margin-bottom: 10px;
+}
+
+#body {
+    width: 620px;
+    margin-left: 160px;
+    z-index: 3;
+}
+
+#footer {
+    clear: both;
+    width: 780px;
+    text-align: center;
+    z-index: 4;
+}
+
+/* ========================================================================= */
+
+.panel {
+    margin: 10px;
+}
+
+/* ========================================================================= */
+
+.error {
+    font-style: italic;
+    color: red;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.sectionTitle {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #660099;
+    width: 120px;
+    line-height: 30px;
+}
+
+div .zoneEditor {
+    background-color: #F0F0F0;
+    border: 1px solid #669900;
+    margin-bottom: 10px;
+    padding: 0 10px 10px 10px;
+    text-align: left;
+}
+
+div .zoneButton {
+    background-color: #F0F0F0;
+    border: 1px solid #669900;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* ========================================================================= */
+
+#sidebar a {
+    text-decoration: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#sidebar a:hover {
+    text-decoration: overline underline;
+}

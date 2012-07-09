@@ -1,0 +1,39 @@
+<%@ taglib prefix="f" uri="http://java.sun.com/jsf/core" %>
+<%@ taglib prefix="h" uri="http://java.sun.com/jsf/html" %>
+
+<f:subview id="sidebar">
+
+    <h:form>
+        <h:panelGrid columns="1">
+            <f:facet name="header">
+                <h:outputText value="Pets" styleClass="sectionTitle"/>
+            </f:facet>
+
+            <h:commandLink action="#{catalog.doFindProducts}">
+                <h:outputText value="Birds"/>
+                <f:param name="categoryId" value="5"/>
+            </h:commandLink>
+
+            <h:commandLink action="#{catalog.doFindProducts}">
+                <h:outputText value="Cats"/>
+                <f:param name="categoryId" value="4"/>
+            </h:commandLink>
+
+            <h:commandLink action="#{catalog.doFindProducts}">
+                <h:outputText value="Dogs"/>
+                <f:param name="categoryId" value="2"/>
+            </h:commandLink>
+
+            <h:commandLink action="#{catalog.doFindProducts}">
+                <h:outputText value="Fish"/>
+                <f:param name="categoryId" value="1"/>
+            </h:commandLink>
+
+            <h:commandLink action="#{catalog.doFindProducts}">
+                <h:outputText value="Reptiles"/>
+                <f:param name="categoryId" value="3"/>
+            </h:commandLink>
+        </h:panelGrid>
+    </h:form>
+
+</f:subview>

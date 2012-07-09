@@ -1,0 +1,1 @@
+asadmin start-database --dbhost=localhost --dbport=1527 --dbhome=%GLASSFISH_HOME%/javadb

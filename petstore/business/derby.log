@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Mon Jul 09 10:58:09 CEST 2012:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): instance a816c00e-0138-6af5-c94b-000000b9d978 
+on database directory D:\Data\Code\Temp\agoncal-book-javaee5\petstore\business\bookJavaEE5DB  with class loader sun.misc.Launcher$AppClassLoader@35ce36
+Loaded from file:/C:/Documents%20and%20Settings/i2118cl/.m2/repository/org/apache/derby/derby/10.8.2.2/derby-10.8.2.2.jar
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_30-b12
+user.dir=D:\Data\Code\Temp\agoncal-book-javaee5\petstore\business
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

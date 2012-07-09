@@ -1,0 +1,1 @@
+asadmin --port 8282 deploy --force ear\target\pestore-3.0.ear
