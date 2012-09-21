@@ -352,3 +352,12 @@ Vous pouvez augmenter la zone mémoire PermGen de la jvm de la manière suivante
 * dans le tag `<java-config>`, rajouter `<jvm-options>-XX:MaxPermSize=128m</jvm-options>`
 
 * Il vous faut un JDK pour compiler les JSP en servlet. Si vous avez ce message là : `org.apache.jasper.JasperException: PWC6345: There is an error in invoking javac.  A full JDK (not just JRE) is required`. Il faut que dans le fichier `%GLASSFISH_HOME%\config\asenv.bat` la variable `AS_JAVA` pointe vers le JDK et non le JRE.
+* 
+* # Licensing
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+
+Book - Beginning Java EE 6 with Glassfish
+Antonio Goncalves
+--
+--
